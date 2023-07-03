@@ -9,6 +9,7 @@ This is the CSS for The Code Magazine HTML Funamentals
   /* universal selector applies to all elements */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* PAGE SECTIONS */
@@ -21,7 +22,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
   position: relative;
 }
@@ -49,7 +50,7 @@ aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  padding: 50px 0;
+  padding: 50px 40px;
   width: 500px;
 }
 
@@ -83,6 +84,7 @@ h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 p {
@@ -123,8 +125,9 @@ li:last-child {
   font-weight: bold;
 }
 
-.related li {
+.related {
   list-style: none;
+  margin-left: 0;
 }
 
 li:first-child {
@@ -225,4 +228,48 @@ h2::after {
   position: absolute;
   top: -10px;
   right: -25px;
+}
+
+/* FLOATS */
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  margin-top: 10px;
+  margin-left: 20px;
+  float: left;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+/* .clear {
+  clear: both;
+} */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+article {
+  width: 825px;
+  float: left;
+}
+
+aside {
+  width: 300px;
+  float: right;
+}
+
+footer {
+  clear: both;
 }
