@@ -59,6 +59,9 @@ html {
 
   font-size: 62.5%;
   overflow-x: hidden;
+
+  /* now works on Safari and Edge 2023 */
+  /* scroll-behavior: smooth; */
 }
 
 body {
