@@ -88,11 +88,16 @@
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              src="img/hero.png"
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp">
+              <source srcset="img/hero-min.png" type="image/png">
+              <img
+              src="img/hero-min.png"
               class="hero-img"
               alt="woman enjoying food, meals in storage container, and food bowls on a table"
             />
+            </picture>
+            
           </div>
         </div>
       </section>
@@ -563,13 +568,14 @@
                 eating well today. You can cancel or pause anytime. And the
                 first meal is on us!
               </p>
-              <form action="#" class="cta-form">
+              <form name="sign-up" class="cta-form" netlify>
                 <div>
                   <label for="full-name">Full Name</label>
                   <input
                     id="full-name"
                     type="text"
                     placeholder="Elias Ainsworth"
+                    name="full-name"
                     required
                   />
                 </div>
@@ -580,12 +586,14 @@
                     id="email"
                     type="email"
                     placeholder="elias@example.com"
+                    name="email"
                     required
                   />
                 </div>
                 <div>
                   <label for="select-where">Where did you hear from us?</label>
-                  <select id="select-where" name="" id="" required>
+                  <select id="select-where"
+                   name="select-where" id="" required>
                     <option value="">Please choose one option</option>
                     <option value="friends">Friends and family</option>
                     <option value="youtube">YouTube video</option>
